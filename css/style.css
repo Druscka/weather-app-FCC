@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+body {
+  background: #EEE;
+}
+
+p {
+  margin: 35 0 0 0;
+}
+
+a {
+  text-decoration:none;
+}
+
+#content {
+  font-family: 'Exo 2', sans-serif;
+  text-align:center;
+}
+
+#city, #country {
+  font-size: 50px;
+}
+
+#temp, #type {
+  font-size: 30px;
+}
+
+#desc {
+  font-size: 25px;
+}
+
+i {
+  font-size:50px;
+  margin: 5px;
+}
+
+.wi-thermometer {
+  font-size:35px;
+}
