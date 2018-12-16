@@ -4,12 +4,16 @@ body {
   background: #EEE;
 }
 
-p {
-  margin: 35 0 0 0;
-}
-
 a {
   text-decoration:none;
+}
+
+.wrap {
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #content {
