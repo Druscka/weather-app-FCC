@@ -1,6 +1,7 @@
 var api = 'https://fcc-weather-api.glitch.me//api/current?';
 var tempType = 'C';
 
+
 $( document ).ready(function(){
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -21,6 +22,7 @@ function getWeather(latitude, longitude) {
       $("#country").text(wt.sys.country);
       var round = Math.round(wt.main.temp);
       console.log(round);
+      console.log(tempType);
       $("#temp").text(round);
       $("#type").text(" °" + tempType);
       $("#desc").text(wt.weather[0].main);
@@ -29,23 +31,23 @@ function getWeather(latitude, longitude) {
   });
 }
 
-$('#change').click(function(){
+function changeTemp(){
   var temp = $('#temp').text();
   var unit = tempType;
   if (unit === 'C') {
     $('#temp').text(Math.round(temp * 1.8 + 32));
     tempType = 'F';
     $("#type").text(" °" + tempType);
-    log.console("Unit is Celsius");
+    console.log("Celsius to Fahrenheit");
   }
   else {
     $('#temp').text(Math.round((temp - 32) / 1.8));
     tempType = 'C';
     $("#type").text(" °" + tempType);
-    log.console("Unit is Fahrenheit");
+    console.log("Fahrenheit to Celsius");
   }
 
-});
+}
 
 function descIcons(description){
   var description = description.toLowerCase();
